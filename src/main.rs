@@ -26,14 +26,14 @@ fn run(source: &str, interpreter: &mut Interpreter) {
 }
 
 fn main() {
-    let mut interpreter = Interpreter::new();   // created once so variables persist
+    let mut interpreter = Interpreter::new();
 
     loop {
         print!(">>> ");
         io::stdout().flush().unwrap();
 
         let mut line = String::new();
-        if io::stdin().read_line(&mut line).unwrap() == 0 { break; }  // Ctrl+D / Ctrl+Z
+        if io::stdin().read_line(&mut line).unwrap() == 0 { break; }
         if line.trim() == "exit" { break; }
 
         run(&line, &mut interpreter);

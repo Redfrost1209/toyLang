@@ -1,5 +1,4 @@
 #[derive(Debug, PartialEq, Clone)]
-
 pub enum TokenType{
     Number(f64),
     Bool(bool),
